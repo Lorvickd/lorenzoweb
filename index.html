@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>cara feliz</title>
+  <title>cara feliz con cresta</title>
   <style>
     body {
       margin: 0;
@@ -21,13 +21,50 @@
       position: relative;
     }
 
+    /* Cresta */
+    .cresta {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+    }
+
+    .pico {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 40px solid red;
+    }
+
+    .ceja {
+      width: 60px;
+      height: 10px;
+      background: black;
+      position: absolute;
+      top: 60px;
+      border-radius: 10px;
+    }
+
+    .ceja.izq {
+      left: 45px;
+      transform: rotate(-10deg);
+    }
+
+    .ceja.der {
+      right: 45px;
+      transform: rotate(10deg);
+    }
+
     .ojo {
       width: 30px;
       height: 30px;
       background: black;
       border-radius: 50%;
       position: absolute;
-      top: 70px;
+      top: 90px;
     }
 
     .ojo.izq {
@@ -52,8 +89,21 @@
 </head>
 <body>
   <div class="cara">
+    <div class="cresta">
+      <div class="pico"></div>
+      <div class="pico"></div>
+      <div class="pico"></div>
+      <div class="pico"></div>
+      <div class="pico"></div>
+    </div>
+    <div class="ceja izq"></div>
+    <div class="ceja der"></div>
     <div class="ojo izq"></div>
     <div class="ojo der"></div>
+    <div class="boca"></div>
+  </div>
+</body>
+</html>
     <div class="boca"></div>
   </div>
 </body>
