@@ -2,26 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>circulo azul</title>
+  <title>cara feliz</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background-color: white;
+      background: white;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .circulo {
-      width: 200px;
-      height: 200px;
-      background-color: blue;
+    .cara {
+      width: 250px;
+      height: 250px;
+      background: yellow;
       border-radius: 50%;
+      position: relative;
+    }
+
+    .ojo {
+      width: 30px;
+      height: 30px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 70px;
+    }
+
+    .ojo.izq {
+      left: 60px;
+    }
+
+    .ojo.der {
+      right: 60px;
+    }
+
+    .boca {
+      width: 120px;
+      height: 60px;
+      border-bottom: 8px solid black;
+      border-radius: 0 0 100px 100px;
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   </style>
 </head>
 <body>
-  <div class="circulo"></div>
+  <div class="cara">
+    <div class="ojo izq"></div>
+    <div class="ojo der"></div>
+    <div class="boca"></div>
+  </div>
 </body>
 </html>
