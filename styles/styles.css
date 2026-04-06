@@ -1,111 +1,28 @@
-body {
+body, html {
   margin: 0;
-  height: 100vh;
-  background: white;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  background: #111;
 }
 
-.cara {
-  width: 250px;
-  height: 250px;
-  background: yellow;
-  border-radius: 50%;
-  position: relative;
-  transition: 0.3s;
+.contenido {
+  text-align: center;
 }
 
-/* Hover en toda la cara */
-.cara:hover {
-  box-shadow: 0 0 30px orange;
+h1 {
+  font-size: 3em;
 }
 
-/* Cresta */
-.cresta {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-}
-
-.pico {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 40px solid red;
-  transition: 0.3s;
-}
-
-.pico:hover {
-  border-bottom: 40px solid hotpink;
-  transform: scale(1.2);
-}
-
-.ceja {
-  width: 60px;
-  height: 10px;
-  background: black;
-  position: absolute;
-  top: 60px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.ceja:hover {
-  background: purple;
-  transform: scale(1.2);
-}
-
-.ceja.izq {
-  left: 45px;
-  transform: rotate(-10deg);
-}
-
-.ceja.der {
-  right: 45px;
-  transform: rotate(10deg);
-}
-
-.ojo {
-  width: 30px;
-  height: 30px;
-  background: black;
-  border-radius: 50%;
-  position: absolute;
-  top: 90px;
-  transition: 0.3s;
-}
-
-.ojo:hover {
-  background: lime;
-  transform: scale(1.3);
-}
-
-.ojo.izq {
-  left: 60px;
-}
-
-.ojo.der {
-  right: 60px;
-}
-
-.boca {
-  width: 120px;
-  height: 60px;
-  border-bottom: 8px solid black;
-  border-radius: 0 0 100px 100px;
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.3s;
-}
-
-.boca:hover {
-  border-bottom: 8px solid red;
-  transform: translateX(-50%) scale(1.1);
+p {
+  font-size: 1.5em;
 }
