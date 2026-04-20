@@ -2,17 +2,92 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Recorrido Parque de los Hippies</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+  <title>Recorrido Virtual - Parque de los Hippies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
 
-<a href="slide2.html" class="slide">
-  <div class="contenido">
+    .slide {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Fondos */
+    #slide1 { background: #1abc9c; }
+    #slide2 { background: #3498db; }
+    #slide3 { background: #9b59b6; }
+    #slide4 { background: #e67e22; }
+    #slide5 { background: #e74c3c; }
+
+    .hint {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body onclick="nextSlide()">
+
+  <div id="slide1" class="slide active">
     <h1>Parque de los Hippies</h1>
-    <p>Haz clic para comenzar el recorrido</p>
+    <p>Ubicado en Bogotá, es un punto de encuentro icónico entre la Calle 60 y la Carrera Séptima.</p>
+    <div class="hint">Haz clic para continuar</div>
   </div>
-</a>
+
+  <div id="slide2" class="slide">
+    <h1>Historia</h1>
+    <p>Desde los años 60, ha sido un espacio ligado a movimientos culturales, arte urbano y expresión juvenil.</p>
+  </div>
+
+  <div id="slide3" class="slide">
+    <h1>Cultura</h1>
+    <p>Es conocido por la música en vivo, el skate, el arte callejero y la diversidad de tribus urbanas.</p>
+  </div>
+
+  <div id="slide4" class="slide">
+    <h1>Importancia social</h1>
+    <p>Funciona como un espacio de encuentro donde convergen distintas culturas, ideas y formas de expresión.</p>
+  </div>
+
+  <div id="slide5" class="slide">
+    <h1>Actualidad</h1>
+    <p>Hoy sigue siendo un símbolo de libertad cultural en Bogotá, aunque enfrenta retos de seguridad y convivencia.</p>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function nextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
