@@ -1,22 +1,23 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
+/* Diapositivas */
 .slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-decoration: none;
+  display: none;
+  height: 100vh;
+  width: 100vw;
   color: white;
-  background: #111;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
-.contenido {
-  text-align: center;
+/* Slide activa */
+.active {
+  display: block;
 }
 
 h1 {
@@ -25,4 +26,22 @@ h1 {
 
 p {
   font-size: 1.5em;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Fondos de cada slide */
+#slide1 { background: #1abc9c; }
+#slide2 { background: #3498db; }
+#slide3 { background: #9b59b6; }
+#slide4 { background: #e67e22; }
+#slide5 { background: #e74c3c; }
+
+/* Texto de ayuda */
+.hint {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 14px;
+  opacity: 0.7;
 }
