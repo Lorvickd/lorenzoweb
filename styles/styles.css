@@ -1,47 +1,748 @@
+/* =========================================
+   MIS STICKERS
+   ========================================= */
+
+
+/* COLORES */
+
+:root {
+
+    --amarillo: #fff500;
+    --rojo: #ff1818;
+    --azul: #2525ff;
+    --negro: #050505;
+    --blanco: #fffef5;
+
+    --titulo: "Anton", Impact, sans-serif;
+    --mono: "DM Mono", monospace;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
+
+    background: var(--amarillo);
+
+    color: var(--negro);
+
+    font-family: var(--mono);
+
+    overflow-x: hidden;
 }
 
-/* Diapositivas */
-.slide {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  color: white;
-  text-align: center;
-  padding: 40px;
-  box-sizing: border-box;
+
+img {
+
+    max-width: 100%;
+
+    display: block;
 }
 
-/* Slide activa */
-.active {
-  display: block;
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
 }
 
-h1 {
-  font-size: 3em;
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+
+    height: 70px;
+
+    padding: 0 5vw;
+
+    border-bottom: 5px solid var(--negro);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--amarillo);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
 }
 
-p {
-  font-size: 1.5em;
-  max-width: 800px;
-  margin: auto;
+
+.logo {
+
+    font-family: var(--titulo);
+
+    font-size: 1.5rem;
 }
 
-/* Fondos de cada slide */
-#slide1 { background: #1abc9c; }
-#slide2 { background: #3498db; }
-#slide3 { background: #9b59b6; }
-#slide4 { background: #e67e22; }
-#slide5 { background: #e74c3c; }
 
-/* Texto de ayuda */
-.hint {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  font-size: 14px;
-  opacity: 0.7;
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+    font-size: 0.7rem;
+}
+
+
+nav a {
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.2s;
+}
+
+
+nav a:hover {
+
+    border-color: var(--rojo);
+
+    color: var(--rojo);
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro {
+
+    min-height: 75vh;
+
+    padding: 100px 8vw;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-bottom: 5px solid var(--negro);
+}
+
+
+/* CÍRCULO AZUL */
+
+.intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 50vw;
+
+    height: 50vw;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+
+    border: 6px solid var(--negro);
+
+    right: -15vw;
+
+    top: -15vw;
+
+    z-index: 0;
+}
+
+
+.intro > * {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.intro > p {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 8px 12px;
+
+    background: var(--negro);
+
+    color: var(--amarillo);
+
+    font-size: 0.7rem;
+
+    margin-bottom: 25px;
+}
+
+
+.intro h1 {
+
+    font-family: var(--titulo);
+
+    font-size: clamp(6rem, 15vw, 13rem);
+
+    line-height: 0.78;
+
+    color: var(--blanco);
+
+    -webkit-text-stroke: 3px var(--negro);
+
+    letter-spacing: -2px;
+}
+
+
+.intro h1 span {
+
+    display: block;
+
+    color: var(--rojo);
+
+    margin-left: 10vw;
+
+    text-shadow: 8px 8px 0 var(--negro);
+}
+
+
+.intro-box {
+
+    width: fit-content;
+
+    margin-top: 40px;
+
+    background: var(--blanco);
+
+    border: 4px solid var(--negro);
+
+    padding: 15px 20px;
+
+    box-shadow: 8px 8px 0 var(--negro);
+
+    transform: rotate(-2deg);
+
+    font-size: 0.8rem;
+}
+
+
+/* DECORACIÓN */
+
+.intro-decoration {
+
+    position: absolute;
+
+    right: 35%;
+
+    bottom: 15%;
+
+    font-size: 5rem;
+
+    color: var(--rojo);
+
+    -webkit-text-stroke: 2px var(--negro);
+
+    transform: rotate(15deg);
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   STICKERS
+   ========================================= */
+
+.stickers {
+
+    background: var(--rojo);
+
+    padding: 110px 7vw 130px;
+
+    color: var(--blanco);
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-bottom: 5px solid var(--negro);
+}
+
+
+/* TEXTO DE FONDO */
+
+.stickers::before {
+
+    content: "STICKERS ★ STICKERS ★ STICKERS ★";
+
+    position: absolute;
+
+    top: 20px;
+
+    left: -30px;
+
+    font-family: var(--titulo);
+
+    font-size: 5rem;
+
+    color: rgba(0, 0, 0, 0.12);
+
+    white-space: nowrap;
+
+    transform: rotate(-3deg);
+}
+
+
+/* TÍTULO */
+
+.section-title {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 70px;
+}
+
+
+.section-title p {
+
+    font-size: 0.7rem;
+
+    margin-bottom: 15px;
+}
+
+
+.section-title h2 {
+
+    font-family: var(--titulo);
+
+    font-size: clamp(5rem, 11vw, 10rem);
+
+    line-height: 0.8;
+
+    -webkit-text-stroke: 3px var(--negro);
+}
+
+
+.section-title h2 span {
+
+    color: var(--amarillo);
+
+    -webkit-text-stroke: 2px var(--negro);
+}
+
+
+/* =========================================
+   GALERÍA
+   ========================================= */
+
+.gallery {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* TARJETAS */
+
+.sticker {
+
+    background: var(--blanco);
+
+    border: 5px solid var(--negro);
+
+    padding: 15px;
+
+    box-shadow: 12px 12px 0 var(--negro);
+
+    color: var(--negro);
+
+    transition: 0.25s ease;
+}
+
+
+.sticker:hover {
+
+    transform: translateY(-15px) rotate(0deg) !important;
+
+    box-shadow: 18px 18px 0 var(--negro);
+}
+
+
+/* ROTACIONES */
+
+.sticker-1 {
+
+    transform: rotate(-4deg);
+}
+
+
+.sticker-2 {
+
+    transform: rotate(3deg);
+}
+
+
+.sticker-3 {
+
+    transform: rotate(-2deg);
+}
+
+
+/* CAJA DE IMAGEN */
+
+.image-box {
+
+    background: var(--amarillo);
+
+    border: 3px solid var(--negro);
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.image-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: 0.3s;
+}
+
+
+.sticker:hover img {
+
+    transform: scale(1.07);
+}
+
+
+/* NÚMERO */
+
+.sticker p {
+
+    font-family: var(--titulo);
+
+    font-size: 1.8rem;
+
+    padding-top: 10px;
+
+    color: var(--rojo);
+}
+
+
+/* =========================================
+   MÁS STICKERS
+   ========================================= */
+
+.more {
+
+    text-align: center;
+
+    margin-top: 90px;
+
+    font-family: var(--titulo);
+
+    font-size: 2rem;
+
+    color: var(--amarillo);
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+
+    background: var(--azul);
+
+    color: var(--blanco);
+
+    padding: 130px 8vw;
+
+    text-align: center;
+
+    border-bottom: 5px solid var(--negro);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.about-mark {
+
+    font-size: 5rem;
+
+    color: var(--rojo);
+
+    -webkit-text-stroke: 2px var(--negro);
+
+    margin-bottom: 20px;
+}
+
+
+.about h2 {
+
+    font-family: var(--titulo);
+
+    font-size: clamp(5rem, 12vw, 11rem);
+
+    line-height: 0.8;
+
+    -webkit-text-stroke: 3px var(--negro);
+}
+
+
+.about h2 span {
+
+    color: var(--amarillo);
+}
+
+
+.about p {
+
+    margin-top: 35px;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    min-height: 70px;
+
+    padding: 20px 5vw;
+
+    background: var(--negro);
+
+    color: var(--amarillo);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 0.6rem;
+}
+
+
+footer span:nth-child(2) {
+
+    color: var(--rojo);
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+
+    header {
+
+        padding: 15px 5vw;
+
+        height: auto;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+
+        font-size: 1.1rem;
+    }
+
+
+    nav {
+
+        gap: 15px;
+
+        font-size: 0.55rem;
+    }
+
+
+    .intro {
+
+        min-height: 700px;
+
+        padding: 80px 6vw;
+    }
+
+
+    .intro::after {
+
+        width: 80vw;
+
+        height: 80vw;
+
+        right: -35vw;
+
+        top: 40%;
+    }
+
+
+    .intro h1 {
+
+        font-size: 21vw;
+    }
+
+
+    .intro h1 span {
+
+        margin-left: 4vw;
+    }
+
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        gap: 60px;
+    }
+
+
+    .sticker-1,
+    .sticker-2,
+    .sticker-3 {
+
+        transform: rotate(0deg);
+    }
+
+
+    .stickers {
+
+        padding: 90px 6vw 110px;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 19vw;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   TELÉFONOS
+   ========================================= */
+
+@media (max-width: 500px) {
+
+
+    header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    nav {
+
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+
+    .intro {
+
+        min-height: 650px;
+    }
+
+
+    .intro h1 {
+
+        font-size: 23vw;
+    }
+
+
+    .intro-box {
+
+        font-size: 0.7rem;
+
+        max-width: 90%;
+    }
+
+
+    .more {
+
+        font-size: 1.5rem;
+    }
+
+
+    .about h2 {
+
+        font-size: 20vw;
+    }
+
 }
