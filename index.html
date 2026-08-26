@@ -1,94 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <link rel="stylesheet" href="styles/styles.css">
-  <meta charset="UTF-8">
-  <title>Recorrido Virtual - Parque de los Hippies</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .slide {
-      display: none;
-      height: 100vh;
-      width: 100vw;
-      color: white;
-      text-align: center;
-      padding: 40px;
-      box-sizing: border-box;
-    }
+    <title>Mis Stickers ★</title>
 
-    .active {
-      display: block;
-    }
+    <link rel="stylesheet" href="styles/styles.css">
 
-    h1 {
-      font-size: 3em;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    p {
-      font-size: 1.5em;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* Fondos */
-    #slide1 { background: #1abc9c; }
-    #slide2 { background: #3498db; }
-    #slide3 { background: #9b59b6; }
-    #slide4 { background: #e67e22; }
-    #slide5 { background: #e74c3c; }
-
-    .hint {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body onclick="nextSlide()">
 
-  <div id="slide1" class="slide active">
-    <h1>Parque de los Hippies</h1>
-    <p>Ubicado en Bogotá, es un punto de encuentro icónico entre la Calle 60 y la Carrera Séptima.</p>
-    <div class="hint">Haz clic para continuar</div>
-  </div>
 
-  <div id="slide2" class="slide">
-    <h1>Historia</h1>
-    <p>Desde los años 60, ha sido un espacio ligado a movimientos culturales, arte urbano y expresión juvenil.</p>
-  </div>
+<body>
 
-  <div id="slide3" class="slide">
-    <h1>Cultura</h1>
-    <p>Es conocido por la música en vivo, el skate, el arte callejero y la diversidad de tribus urbanas.</p>
-  </div>
+    <!-- CABECERA -->
 
-  <div id="slide4" class="slide">
-    <h1>Importancia social</h1>
-    <p>Funciona como un espacio de encuentro donde convergen distintas culturas, ideas y formas de expresión.</p>
-  </div>
+    <header>
 
-  <div id="slide5" class="slide">
-    <h1>Actualidad</h1>
-    <p>Hoy sigue siendo un símbolo de libertad cultural en Bogotá, aunque enfrenta retos de seguridad y convivencia.</p>
-  </div>
+        <div class="logo">
+            ★ MIS STICKERS
+        </div>
 
-  <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
+        <nav>
+            <a href="#sobre-mi">SOBRE MÍ</a>
+            <a href="#stickers">STICKERS</a>
+        </nav>
 
-    function nextSlide() {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }
-  </script>
+    </header>
+
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="intro" id="sobre-mi">
+
+        <div class="intro-decoration">✦</div>
+
+        <p>HOLA, SOY YO</p>
+
+        <h1>
+            HAGO
+            <span>STICKERS.</span>
+        </h1>
+
+        <div class="intro-box">
+            Dibujos raros que hago por diversión.
+        </div>
+
+    </section>
+
+
+    <!-- STICKERS -->
+
+    <section class="stickers" id="stickers">
+
+        <div class="section-title">
+
+            <p>MI COLECCIÓN</p>
+
+            <h2>
+                STICKERS
+                <span>★</span>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <!-- STICKER 1 -->
+
+            <div class="sticker sticker-1">
+
+                <div class="image-box">
+
+                    <img
+                        src="images/sticker01.png"
+                        alt="Sticker 1"
+                    >
+
+                </div>
+
+                <p>01</p>
+
+            </div>
+
+
+            <!-- STICKER 2 -->
+
+            <div class="sticker sticker-2">
+
+                <div class="image-box">
+
+                    <img
+                        src="images/sticker02.png"
+                        alt="Sticker 2"
+                    >
+
+                </div>
+
+                <p>02</p>
+
+            </div>
+
+
+            <!-- STICKER 3 -->
+
+            <div class="sticker sticker-3">
+
+                <div class="image-box">
+
+                    <img
+                        src="images/sticker03.png"
+                        alt="Sticker 3"
+                    >
+
+                </div>
+
+                <p>03</p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="more">
+            ✦ MÁS PRÓXIMAMENTE ✦
+        </div>
+
+    </section>
+
+
+    <!-- PEQUEÑA PRESENTACIÓN -->
+
+    <section class="about">
+
+        <div class="about-mark">
+            ★
+        </div>
+
+        <h2>
+            HECHO
+            <span>Lorenzo Garcia</span>
+        </h2>
+
+        <p>
+            Para mí · Para ti · Para pegar en cualquier parte
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>© 2026</span>
+
+        <span>★ calcas ★</span>
+
+        <span>HECHAS CON AMOR</span>
+
+    </footer>
+
 
 </body>
+
 </html>
